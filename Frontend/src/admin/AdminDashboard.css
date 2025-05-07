@@ -1,0 +1,194 @@
+/* Admin Dashboard Layout */
+.admin-dashboard {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.sidebar {
+  flex-shrink: 0;
+  width: 350px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  margin-left: 250px;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+/* Sidebar Hidden - Adjustments */
+.sidebar.hidden + .main-content {
+  margin-left: 0;
+}
+
+.sidebar.hidden + .main-content .admin-header {
+  left: 0;
+  width: 100%; /* Full width when sidebar is hidden */
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    height: auto;
+  }
+  
+  .main-content {
+    min-height: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .admin-header {
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .charts-container, .chart-wrapper {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+
+  .chart-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
+/* Nav Icon Styles */
+.nav-icon {
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+  color: currentColor;
+}
+
+.admin-dashboard-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100%;
+}
+
+.dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+    min-height: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .admin-dashboard {
+        padding: 15px;
+        margin: 0;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .dashboard-content {
+        padding: 15px;
+        box-shadow: none;
+        height: auto;
+        min-height: 100%;
+    }
+
+    .charts-container, .chart-wrapper {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-dashboard {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .dashboard-content {
+        padding: 10px;
+        box-shadow: none;
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+
+    .charts-container, .chart-wrapper {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+    }
+
+    /* Adjust table container for mobile */
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Make tables responsive */
+    table {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+/* Fix for any nested content */
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.col, [class*="col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+}

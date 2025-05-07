@@ -1,0 +1,19 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "Capstone project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "nodemailer": "^6.10.0",
+    "xlsx": "^0.18.5"
+  }
+}

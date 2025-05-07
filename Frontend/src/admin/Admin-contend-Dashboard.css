@@ -1,0 +1,188 @@
+.dashboard {
+  padding: 24px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dashboard-subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+.dashboard-controls {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.date-filters {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.date-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-input-group label {
+  font-size: 13px;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.date-input {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #4a5568;
+  background-color: white;
+  min-width: 200px;
+}
+
+.date-error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.export-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+}
+
+.export-btn:hover {
+  background-color: #059669;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 0 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.chart-card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+}
+
+.population-trend {
+  grid-column: 1 / -1;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 16px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #10b981;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .chart-card {
+    padding: 20px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 16px;
+  }
+  
+  .dashboard-header {
+    padding: 16px;
+  }
+  
+  .dashboard-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .date-filters {
+    flex-direction: column;
+  }
+  
+  .date-input {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .export-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .charts-grid {
+    padding: 0 16px;
+    gap: 16px;
+  }
+}
